@@ -8,6 +8,15 @@ class C
   end
 end
 
+class D < C
+  Const = "fugafuga"
+  #p(D::hoge(Const))
+
+  def hoge(str)
+    return C.new().my_upcase(str)
+  end
+end
+
 c = C.new()
 p c.my_upcase("hogehoge")
 
